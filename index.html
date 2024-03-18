@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <title>Flippable tiles</title>
+    <style>
+      * {
+        font-family: Apercu, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: calc(50% - 2px);
+        height: 240px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        padding: 8px;
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        overflow-y: auto;
+      }
+
+      .flip-card-front {
+        background-color: #622569;
+        color: white;
+      }
+
+      .flip-card-back {
+        background-color: #d6d4e0;
+        color: #622569;
+        transform: rotateY(180deg);
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 auto;
+        max-width: 880px;
+      }
+
+      p {
+        line-height: 1.4;
+      }
+
+      body {
+        background-color: #b8a9c9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      style="
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        font-family: Apercu, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        font-weight: bolder;
+        font-size: 2.5em;
+        color: #622569;
+      ">
+      FLIPPING CARDS
+    </h1>
+    <div class="card-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Logic: Step 1</h1>
+            <p>
+              Could the hiring results have happened by random chance? Or is
+              that statistically impossible?
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Example: Step 1</h1>
+            <p>
+              In the last 5 years, StarComm Corporation had 1,000 candidates and
+              hired 200 people. Of the 1,000 candidates, 400 were women (40%).
+              Of the 200 people hired, only 20 were women (10%).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Logic: Step 2</h1>
+            <p>
+              If the hiring results haven't happened by chance, they must have
+              happened by "purposeful exclusion."
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Example: Step 2</h1>
+            <p>
+              Statisticians determine that the probability of getting these
+              hiring results by chance is essentially zero. Lawyers can then
+              conclude that the low number of women hired isn't accidental, but
+              purposeful in some way.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Logic: Step 3</h1>
+            <p>
+              If the employer is aware of this "purposeful exclusion," they show
+              "reckless disregard" for the rights of individual candidates not
+              to be discriminated against.
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Example: Step 3</h1>
+            <p>
+              StarComm Corporation is now aware that their hiring practice
+              discriminates against women. So lawyers can argue that SCC
+              violated the rights of women candidates to have a fair shot
+              (without discrimination) in the hiring process.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Logic: Step 4</h1>
+            <p>
+              The burden of proof shifts to the employer to prove why hiring
+              requirements are valid and necessary.
+            </p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Example: Step 4</h1>
+            <p>
+              The burden is now on StarComm Corporation to get its hiring
+              process into legal shape OR to prove why its hiring process has to
+              be the way it is. It's no longer the job of individual women
+              candidates to prove they are up against an unfair process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
